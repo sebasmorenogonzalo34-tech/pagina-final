@@ -85,22 +85,6 @@ textarea:focus-visible {
     font-weight: 600;
 }
 
-.bandejaenlace {
-    background: var(--choco);
-    color: var(--blanco) !important;
-    padding: .4rem 1rem;
-    border-radius: 30px;
-}
-
-.bandejaenlace span {
-    background: var(--rosa);
-    color: var(--texto);
-    border-radius: 50%;
-    padding: 0 .45rem;
-    margin-left: .3rem;
-    font-weight: 700;
-}
-
 .portada {
     position: relative;
     text-align: center;
@@ -197,11 +181,6 @@ textarea:focus-visible {
     background: var(--chocooscuro);
 }
 
-.botonancho {
-    display: block;
-    margin-top: .8rem;
-}
-
 .botonclaro {
     border-color: var(--blanco);
     color: var(--blanco);
@@ -220,6 +199,7 @@ textarea:focus-visible {
 }
 
 .ventana {
+    scroll-behavior: smooth;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     border-radius: 20px;
@@ -444,13 +424,6 @@ input[type=range] {
     font-size: 1.15rem;
 }
 
-.vacio {
-    text-align: center;
-    color: var(--suave);
-    grid-column: 1/-1;
-    padding: 1rem;
-}
-
 .beneficios {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
@@ -504,34 +477,6 @@ input[type=range] {
 .resumen h3 {
     font-family: var(--titulo);
     margin-bottom: 1rem;
-}
-
-.listabandeja {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: .8rem;
-}
-
-.listabandeja li {
-    display: grid;
-    grid-template-columns: 1fr auto auto;
-    gap: .6rem;
-    align-items: center;
-    font-size: .9rem;
-    border-bottom: 1px solid var(--borde);
-    padding-bottom: .6rem;
-}
-
-.listabandeja small {
-    color: var(--suave);
-}
-
-.totalbandeja {
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.2rem;
-    margin-top: 1rem;
 }
 
 .nota {
@@ -625,80 +570,6 @@ fieldset {
     border-top: 1px solid #6B5346;
     margin-top: 2rem;
     padding-top: 1rem;
-}
-
-.ticket {
-    background: var(--blanco);
-    border-radius: 16px;
-    padding: 2rem;
-    max-width: 440px;
-    width: 100%;
-    max-height: 90vh;
-    overflow: auto;
-    text-align: center;
-    border-top: 8px solid var(--rosa);
-}
-
-.ticket h2 {
-    font-family: var(--titulo);
-    margin: .5rem 0;
-}
-
-.sello {
-    display: inline-block;
-    width: 48px;
-    height: 48px;
-    line-height: 48px;
-    border-radius: 50%;
-    background: var(--choco);
-    color: var(--blanco);
-    font-size: 1.5rem;
-}
-
-.numeropedido {
-    font-family: monospace;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--choco);
-    background: var(--crema);
-    padding: .4rem;
-    border-radius: 8px;
-    margin: .8rem 0;
-}
-
-.lineas {
-    list-style: none;
-    text-align: left;
-    margin: 1rem 0;
-    border-top: 1px dashed var(--suave);
-}
-
-.lineas li {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: .5rem 0;
-    border-bottom: 1px dashed var(--borde);
-    font-size: .9rem;
-}
-
-.lineas small {
-    color: var(--suave);
-}
-
-.totalfila {
-    font-weight: 700;
-    font-size: 1.1rem;
-}
-
-.detalleticket {
-    font-size: .85rem;
-    color: var(--suave);
-    margin-bottom: .5rem;
-}
-
-.ticket .boton {
-    margin-top: 1rem;
 }
 
 .detalle {
@@ -866,25 +737,6 @@ fieldset {
     display: inline-block;
 }
 
-.tamano {
-    display: flex;
-    flex-direction: column;
-    gap: .3rem;
-    font-size: .8rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
-
-.tamano select {
-    font-family: var(--cuerpo);
-    font-size: .9rem;
-    padding: .5rem .7rem;
-    border: 1.5px solid #B9AEA5;
-    border-radius: 8px;
-    background: var(--blanco);
-    color: var(--texto);
-}
-
 .tablaporciones {
     width: 100%;
     border-collapse: collapse;
@@ -929,15 +781,104 @@ fieldset {
     margin-top: .8rem;
 }
 
-.info .botonancho {
+.flechacarrusel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--blanco);
+    color: var(--chocooscuro);
+    font-size: 1.6rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .25);
+}
+
+.izquierda {
+    left: 12px;
+}
+
+.derecha {
+    right: 12px;
+}
+
+.pietarjeta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--borde);
+    padding-top: 1rem;
+}
+
+.pasos {
+    padding-left: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    font-size: .95rem;
+    color: var(--texto);
+}
+
+.agregar {
     width: 100%;
+    margin-top: .8rem;
+    background: var(--choco);
+    color: var(--blanco);
 }
 
-.ticket {
-    border: none;
-    margin: auto;
+.agregar:hover {
+    background: var(--chocooscuro);
 }
 
-.ticket::backdrop {
-    background: rgba(30, 18, 12, .7);
+.tablaporciones .agregar {
+    width: auto;
+    margin: 0;
+    padding: .35rem .9rem;
+}
+
+.enlacecarrito {
+    background: var(--choco);
+    color: var(--blanco) !important;
+    padding: .4rem 1rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.contador {
+    background: var(--rosa);
+    color: var(--texto);
+    border-radius: 50%;
+    padding: 0 .45rem;
+    margin-left: .3rem;
+    font-weight: 700;
+}
+
+.listacarrito {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    margin-bottom: 1rem;
+    font-size: .9rem;
+}
+
+.listacarrito li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 1px solid var(--borde);
+    padding-bottom: .6rem;
+}
+
+.totalcarrito {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
 }
