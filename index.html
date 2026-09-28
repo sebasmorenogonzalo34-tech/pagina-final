@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dulce Enigma | Pastelería de autor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/estilos.css">
+<link rel="icon" type="image/png" href="./img/pngwing.com.png">
+</head>
+<body>
+<header class="encabezado">
+  <div class="logo">Dulce Enigma</div>
+  <nav class="enlaces">
+    <a href="#pasteles">Pasteles</a>
+    <a href="#filosofia">Filosofía</a>
+    <a href="#pedido">Pedido</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#pedido" class="bandejaenlace">Bandeja</a>
+  </nav>
+</header>
+
+<section class="portada">
+  <span class="adorno adornouno"></span><span class="adorno adornodos"></span>
+  <div class="contenidoportada">
+    <span class="insignia">Repostería artesanal · Cocina oculta</span>
+    <h1>Un secreto dulce hecho para ti.</h1>
+    <p>Pastelería artesanal que crea momentos dulces e inolvidables, con recetas únicas hechas con amor.</p>
+    <a href="#pedido" class="boton botonsolido">Hacer un pedido</a>
+  </div>
+</section>
+
+<section class="carrusel" aria-label="Pasteles favoritos">
+  <div class="ventana"><div class="pista" id="pista"></div></div>
+</section>
+
+<div class="separador" aria-hidden="true">✦ ✦ ✦</div>
+
+<div class="consola">
+  <div class="busqueda">
+    <label for="campobusqueda" class="soloetiqueta">Buscar pasteles</label>
+    <input type="search" id="campobusqueda" placeholder="Buscar por nombre o ingrediente..." autocomplete="off">
+  </div>
+  <div class="filtros">
+    <button class="botonfiltro activo" data-filtro="todos">Todos</button>
+    <button class="botonfiltro" data-filtro="cacao">Cacao</button>
+    <button class="botonfiltro" data-filtro="frutal">Frutal</button>
+    <button class="botonfiltro" data-filtro="cremoso">Cremoso</button>
+  </div>
+  <div class="intensidad">
+    <label for="rangointensidad">Perfil de intensidad: <span id="textointensidad">Intenso y profundo</span></label>
+    <input type="range" id="rangointensidad" min="1" max="3" value="3" step="1">
+  </div>
+</div>
+
+<section id="pasteles" class="seccion">
+  <h2 class="titulo">Nuestros pasteles</h2>
+  <div class="rejilla" id="rejilla"></div>
+</section>
+
+<section class="beneficios">
+  <div><span>🎂</span><h3>Hecho por encargo</h3><p>Cada pastel se hornea fresco el día de tu entrega.</p></div>
+  <div><span>🌿</span><h3>Ingredientes reales</h3><p>Mantequilla, chocolate y frutas de origen seleccionado.</p></div>
+  <div><span>🛵</span><h3>Domicilio</h3><p>Entregamos en la ciudad con empaque refrigerado.</p></div>
+  <div><span>🎁</span><h3>Personalizado</h3><p>Añade una dedicatoria o pide tu diseño especial.</p></div>
+</section>
+
+<section id="filosofia" class="seccion filosofia">
+  <h2 class="titulo">Nuestra filosofía</h2>
+  <p>Dulce Enigma nace en una cocina pequeña con una idea simple: que cada postre tenga un misterio por descubrir. Trabajamos por pedido, con recetas propias y sin conservantes, para que lo que llegue a tu mesa sea siempre memorable.</p>
+</section>
+
+<section id="pedido" class="seccion">
+  <h2 class="titulo">Haz tu pedido</h2>
+  <div class="cajapedido">
+    <div class="resumen">
+      <h3>Tu bandeja</h3>
+      <ul id="listabandeja" class="listabandeja"></ul>
+      <button type="button" class="boton" onclick="bandeja={};dibujarBandeja()">Vaciar bandeja</button>
+      <p class="totalbandeja">Total <strong id="totalpedido">$0</strong></p>
+      <p class="nota">Pedidos con 48 horas de anticipación.</p>
+    </div>
+    <form id="formulariopedido" class="formulario">
+      <div class="fila">
+        <label>Nombre completo<input type="text" name="nombre" required autocomplete="name"></label>
+        <label>Teléfono<input type="tel" name="telefono" required pattern="[0-9 +]{7,15}" autocomplete="tel"></label>
+      </div>
+      <label>Correo electrónico<input type="email" name="correo" required autocomplete="email"></label>
+      <fieldset>
+        <legend>Tipo de entrega</legend>
+        <label class="opcion"><input type="radio" name="entrega" value="recogida" checked> Recoger en tienda</label>
+        <label class="opcion"><input type="radio" name="entrega" value="domicilio"> Domicilio</label>
+      </fieldset>
+      <label>Dirección de entrega (solo domicilio)<input type="text" name="direccion"></label>
+      <div class="fila">
+        <label>Fecha<input type="date" name="fecha" required></label>
+        <label>Hora<select name="hora" required><option value="">Elegir</option><option>9:00 a. m.</option><option>11:00 a. m.</option><option>2:00 p. m.</option><option>4:00 p. m.</option></select></label>
+      </div>
+      <label>Método de pago<select name="pago" required><option>Efectivo</option><option>Transferencia</option><option>Tarjeta</option></select></label>
+      <label>Dedicatoria (opcional)<textarea name="dedicatoria" rows="2" maxlength="80"></textarea></label>
+      <button type="submit" class="boton botonsolido">Confirmar pedido</button>
+    </form>
+  </div>
+</section>
+
+<footer id="contacto" class="piedepagina">
+  <div class="columnas">
+    <div><div class="logo logoclaro">Dulce Enigma</div><p>Pastelería de autor hecha con amor, por encargo.</p></div>
+    <div><h4>Horario</h4><p>Lunes a sábado: 9 a. m. – 6 p. m.<br>Domingos: 10 a. m. – 2 p. m.</p></div>
+    <div><h4>Ubicación</h4><p><strong>Pastelería dulce enigma</strong><br>Confitería/Pastelería<br>Carrera 65A #30a-38, Medellín</p></div>
+    <div><h4>Contacto</h4><p>+57 310 757 4299<br>dulcenigma@gmail.com</p></div>
+    <div><h4>Síguenos</h4><p><a href="#">Instagram</a><br><a href="#">Facebook</a><br><a href="#">WhatsApp</a></p></div>
+  </div>
+  <p class="derechos">© 2026 Dulce Enigma. Todos los derechos reservados.</p>
+</footer>
+
+<dialog id="ticket" class="ticket"></dialog>
+
+<script src="./js/datos.js"></script>
+<script src="./js/estilo.js"></script>
+</body>
+</html>
