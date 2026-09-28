@@ -891,19 +891,9 @@ fieldset {
     }
 }
 
-/* ===== Nuevo: utilidades ===== */
 [hidden] { display: none !important; }
 
-/* ===== Filtros del catálogo (solo CSS) ===== */
-.filtros { margin-bottom: 2.5rem; }
-.filtros input { position: absolute; opacity: 0; pointer-events: none; }
-.filtros input:checked + .botonfiltro { background: var(--choco); color: var(--blanco); border-color: var(--choco); }
-.filtros input:focus-visible + .botonfiltro { outline: 3px solid var(--choco); outline-offset: 2px; }
-#pasteles:has(#f-cacao:checked) .tarjeta:not(.cacao),
-#pasteles:has(#f-frutal:checked) .tarjeta:not(.frutal),
-#pasteles:has(#f-cremoso:checked) .tarjeta:not(.cremoso) { display: none; }
 
-/* ===== Estrellas (0 a 5, admite decimales con --nota) ===== */
 .estrellas {
     --nota: 5;
     display: inline-block;
@@ -915,7 +905,6 @@ fieldset {
     color: transparent;
 }
 
-/* ===== Agregar al carrito (páginas de producto) ===== */
 .formagregar { display: flex; flex-wrap: wrap; align-items: end; gap: .8rem; }
 .formagregar label { display: flex; flex-direction: column; gap: .3rem; font-size: .85rem; font-weight: 600; }
 .formagregar select,
@@ -965,7 +954,6 @@ fieldset {
 }
 .grupoestrellas p { font-size: .85rem; font-weight: 600; }
 
-/* Selector de estrellas: los radios van de 5 a 1 y se muestran al revés */
 .estrellasinput { display: inline-flex; flex-direction: row-reverse; justify-content: flex-end; }
 .estrellasinput input { position: absolute; opacity: 0; }
 .estrellasinput label {
@@ -982,7 +970,6 @@ fieldset {
 .estrellasinput label:hover ~ label { color: #C9962B; }
 .estrellasinput input:focus-visible + label { outline: 3px solid var(--choco); border-radius: 4px; }
 
-/* ===== Página de pedido / carrito ===== */
 .listacarrito strong { display: block; font-weight: 600; }
 .controlcantidad { display: flex; align-items: center; gap: .5rem; margin-top: .3rem; }
 .controlcantidad button {
@@ -1005,3 +992,92 @@ fieldset {
 @media (max-width: 900px) {
     .cuerpoopiniones { grid-template-columns: 1fr; }
 }
+
+.encabezado {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--crema);
+    box-shadow: 0 0 0 100vmax var(--crema);
+    clip-path: inset(0 -100vmax);
+    padding-block: 1rem;
+}
+
+.boton { border-radius: 999px; }
+.tablaporciones .agregar { border-radius: 999px; }
+
+.etiqueta,
+.insignia {
+    text-transform: none;
+    letter-spacing: .2px;
+    font-weight: 600;
+    font-size: .8rem;
+}
+.etiqueta { color: var(--sabor2); }
+.notas summary { text-transform: none; letter-spacing: 0; font-size: .82rem; }
+
+.tarjeta { border-radius: 20px; }
+.tarjeta:hover { transform: none; box-shadow: 0 14px 34px rgba(92,64,51,.14); }
+.precio { font-family: var(--titulo); color: var(--choco); }
+
+.tablaporciones tbody tr { transition: background .2s; }
+.tablaporciones tbody tr:hover { background: #F6ECE1; }
+.tablaporciones td:nth-child(2) { font-family: var(--titulo); font-weight: 600; color: var(--choco); }
+
+.contador {
+    display: inline-block;
+    min-width: 1.5rem;
+    text-align: center;
+    border-radius: 999px;
+    padding: 0 .4rem;
+    line-height: 1.5;
+}
+
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: 1.5rem;
+    transform: translate(-50%, 1rem);
+    background: var(--chocooscuro);
+    color: var(--blanco);
+    padding: .7rem 1.3rem;
+    border-radius: 999px;
+    font-size: .9rem;
+    font-weight: 500;
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s, transform .25s;
+    z-index: 30;
+    max-width: 90vw;
+    text-align: center;
+}
+.toast.ver { opacity: 1; transform: translate(-50%, 0); }
+
+.resumen { border-top: 4px solid var(--rosa); }
+.listacarrito li { align-items: center; }
+.listacarrito li > span { font-family: var(--titulo); font-weight: 700; color: var(--choco); white-space: nowrap; }
+.controlcantidad span { min-width: 1.5rem; text-align: center; font-weight: 700; }
+.resumen .totalcarrito span:last-child { font-family: var(--titulo); font-weight: 700; color: var(--choco); }
+.vaciar {
+    background: none;
+    border: none;
+    padding: 0;
+    color: var(--suave);
+    font-family: var(--cuerpo);
+    font-size: .82rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.vaciar:hover { color: var(--texto); }
+.resumen hr { border: none; border-top: 1px solid var(--borde); margin: 1.5rem 0 1rem; }
+.resumen h3 + .vacio { margin-top: .2rem; }
+.formulario textarea#pedidotexto { min-height: 5.5rem; resize: vertical; }
+
+@media (min-width: 901px) {
+    .cajapedido .resumen { position: sticky; top: 5.5rem; }
+}
+
+.busqueda { max-width: 520px; margin: 0 auto 2.5rem; }
+.busqueda input { box-shadow: 0 6px 20px rgba(92,64,51,.06); }
+.busqueda input::placeholder { color: var(--suave); opacity: .8; }

@@ -140,15 +140,9 @@
 
   <section id="pasteles" class="seccion">
     <h2 class="titulo">Nuestros pasteles</h2>
-    <div class="filtros" role="radiogroup" aria-label="Filtrar por sabor">
-      <input type="radio" name="filtro" id="f-todos" class="filtro" checked>
-      <label for="f-todos" class="botonfiltro">Todos</label>
-      <input type="radio" name="filtro" id="f-cacao" class="filtro">
-      <label for="f-cacao" class="botonfiltro">Cacao</label>
-      <input type="radio" name="filtro" id="f-frutal" class="filtro">
-      <label for="f-frutal" class="botonfiltro">Frutal</label>
-      <input type="radio" name="filtro" id="f-cremoso" class="filtro">
-      <label for="f-cremoso" class="botonfiltro">Cremoso</label>
+    <div class="busqueda">
+      <label for="buscar" class="soloetiqueta">Buscar pasteles</label>
+      <input type="search" id="buscar" placeholder="Buscar un pastel, sabor o ingrediente…" autocomplete="off">
     </div>
     <div class="rejilla">
       <article class="tarjeta cacao">

@@ -22,6 +22,15 @@
     <div class="cajapedido">
 
       <section class="resumen">
+        <h3>Tu carrito</h3>
+        <p class="vacio" id="vacio">Aún no has añadido nada. <a href="index.html#pasteles">Ver los pasteles</a></p>
+        <ul class="listacarrito" id="listacarrito"></ul>
+        <div id="pie-carrito" hidden>
+          <p class="totalcarrito"><span>Total</span><span id="total">$0</span></p>
+          <button type="button" class="vaciar" data-accion="vaciar">Vaciar carrito</button>
+        </div>
+
+        <hr>
         <h3>¿Cómo pedir?</h3>
         <ol class="pasos">
           <li>Elige tu pastel y la porción en el catálogo.</li>
@@ -32,7 +41,7 @@
       </section>
 
       <form class="formulario" action="mailto:dulcenigma@gmail.com" method="post" enctype="text/plain">
-        <label>Pastel(es) y porción<textarea name="pedido" rows="2" required placeholder="Ej: Tiramisú · 4 - 6 porciones"></textarea></label>
+        <label>Pastel(es) y porción<textarea name="pedido" id="pedidotexto" rows="4" required placeholder="Se llena solo con tu carrito. También puedes escribirlo aquí."></textarea></label>
 
         <div class="fila">
           <label>Nombre completo<input type="text" name="nombre" required autocomplete="name"></label>
