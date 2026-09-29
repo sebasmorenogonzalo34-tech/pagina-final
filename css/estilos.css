@@ -60,7 +60,7 @@ a {
   background-color: #5C4033;
   color: white !important;
   padding: 6px 16px;
-  border-radius: 30px;
+  border-radius: 8px;
 }
 
 .numerito {
@@ -76,28 +76,6 @@ a {
   text-align: center;
   padding: 60px 5% 50px 5%;
   overflow: hidden;
-}
-
-.bolita1 {
-  position: absolute;
-  width: 240px;
-  height: 240px;
-  background-color: #E8B4B8;
-  opacity: 0.35;
-  border-radius: 50%;
-  top: -80px;
-  left: -70px;
-}
-
-.bolita2 {
-  position: absolute;
-  width: 190px;
-  height: 190px;
-  background-color: #C2A68C;
-  opacity: 0.3;
-  border-radius: 50%;
-  bottom: -60px;
-  right: -50px;
 }
 
 .cajaprincipal {
@@ -135,18 +113,13 @@ a {
   border: 2px solid #5C4033;
   color: #5C4033;
   padding: 8px 18px;
-  border-radius: 30px;
+  border-radius: 8px;
   font-family: 'Plus Jakarta Sans', Arial, sans-serif;
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
   text-align: center;
-}
-
-.botoncito:hover {
-  background-color: #5C4033;
-  color: white;
 }
 
 .botonfuerte {
@@ -156,18 +129,9 @@ a {
   font-size: 15px;
 }
 
-.botonfuerte:hover {
-  background-color: #3E2A20;
-}
-
 .botonblanco {
   border-color: white;
   color: white;
-}
-
-.botonblanco:hover {
-  background-color: white;
-  color: #3E2A20;
 }
 
 .botonwhatsapp {
@@ -178,11 +142,6 @@ a {
   font-size: 15px;
 }
 
-.botonwhatsapp:hover {
-  background-color: #1DA851;
-  border-color: #1DA851;
-}
-
 .fotosgrandes {
   max-width: 1100px;
   margin: 10px auto 0 auto;
@@ -191,6 +150,8 @@ a {
 
 .ventanita {
   overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   border-radius: 20px;
@@ -302,13 +263,12 @@ a {
   background-color: white;
   border: 1px solid #B9AEA5;
   padding: 8px 20px;
-  border-radius: 30px;
+  border-radius: 8px;
   font-size: 14px;
   color: #5E534D;
   cursor: pointer;
 }
 
-.botonfiltro:hover,
 .activo {
   background-color: #5C4033;
   color: white;
@@ -336,10 +296,6 @@ a {
   border: 1px solid #E4DFD6;
   border-radius: 20px;
   overflow: hidden;
-}
-
-.cajapastel:hover {
-  box-shadow: 0 8px 25px rgba(92, 64, 51, 0.2);
 }
 
 .fotico {
@@ -621,33 +577,6 @@ a {
 .tablita td {
   padding: 10px 14px;
   border-bottom: 1px solid #E4DFD6;
-}
-
-.agregarpastel {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  gap: 12px;
-}
-
-.agregarpastel label {
-  display: flex;
-  flex-direction: column;
-  font-size: 14px;
-  font-weight: bold;
-  gap: 4px;
-}
-
-.agregarpastel select,
-.agregarpastel input {
-  font-size: 15px;
-  padding: 9px;
-  border: 2px solid #B9AEA5;
-  border-radius: 8px;
-}
-
-.agregarpastel input {
-  width: 80px;
 }
 
 .cajaextra {
@@ -963,6 +892,41 @@ a {
   z-index: 50;
 }
 
+@media (min-width: 1400px) {
+  .cajaprincipal h1 {
+    font-size: 56px;
+  }
+  .fotosgrandes {
+    max-width: 1300px;
+  }
+  .diapo {
+    height: 450px;
+  }
+  .paginapastel,
+  .zonacomentarios,
+  .columnitas {
+    max-width: 1400px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cajaprincipal h1 {
+    font-size: 42px;
+  }
+  .diapo {
+    height: 350px;
+  }
+  .cajapastel {
+    width: 45%;
+  }
+  .paginapastel {
+    gap: 25px;
+  }
+  .fotogrande {
+    height: 340px;
+  }
+}
+
 @media (max-width: 700px) {
   .cajaprincipal h1 {
     font-size: 34px;
@@ -975,5 +939,56 @@ a {
   }
   .fotogrande {
     height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .arriba {
+    justify-content: center;
+    text-align: center;
+  }
+  .menucito {
+    justify-content: center;
+    gap: 12px;
+  }
+  .zona {
+    padding: 40px 5%;
+  }
+  .titulote {
+    font-size: 26px;
+  }
+  .cajaprincipal h1 {
+    font-size: 28px;
+  }
+  .cajaprincipal p {
+    font-size: 16px;
+  }
+  .cajapastel {
+    width: 100%;
+  }
+  .diapo {
+    height: 300px;
+  }
+  .textodiapo {
+    padding: 18px;
+  }
+  .textodiapo h3 {
+    font-size: 21px;
+  }
+  .textodiapo p {
+    font-size: 14px;
+  }
+  .flechaizq,
+  .flechader {
+    width: 36px;
+    height: 36px;
+    line-height: 32px;
+    font-size: 22px;
+  }
+  .ladoizq h1 {
+    font-size: 28px;
+  }
+  .listacompras li {
+    flex-direction: column;
   }
 }
