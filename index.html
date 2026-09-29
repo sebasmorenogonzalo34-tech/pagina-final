@@ -4,274 +4,308 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dulce Enigma | Pastelería de autor</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Pastelería artesanal en Medellín: tortas, tiramisú, macarons, cupcakes y más. Hechos por encargo, con recetas propias y sin conservantes.">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilos.css">
+  <link rel="icon" type="image/png" href="img/pngwing.com.png">
 </head>
 <body>
 
-  <header class="encabezado">
-    <div class="logo">Dulce Enigma</div>
-    <nav class="enlaces">
+  <header class="arriba">
+    <div class="nombrebonito">Dulce Enigma</div>
+    <nav class="menucito">
       <a href="#pasteles">Pasteles</a>
+      <a href="personalizados.html">Personalizados</a>
       <a href="#filosofia">Filosofía</a>
+      <a href="preguntas.html">Preguntas</a>
       <a href="#contacto">Contacto</a>
-      <a href="pedido.html" class="enlacecarrito">Carrito <span class="contador">0</span></a>
+      <a href="pedido.html" class="carritolink">Carrito <span class="numerito">0</span></a>
     </nav>
   </header>
 
-  <section class="portada">
-    <span class="adorno adornouno"></span>
-    <span class="adorno adornodos"></span>
-    <div class="contenidoportada">
-      <span class="insignia">Repostería artesanal · Cocina oculta</span>
+  <section class="principal">
+    <span class="bolita1"></span>
+    <span class="bolita2"></span>
+    <div class="cajaprincipal">
+      <span class="sellito">Repostería artesanal · Cocina oculta</span>
       <h1>Un secreto dulce hecho para ti.</h1>
       <p>Pastelería artesanal que crea momentos dulces e inolvidables, con recetas únicas hechas con amor.</p>
-      <a href="#pasteles" class="boton botonsolido">Ver los pasteles</a>
+      <a href="#pasteles" class="botoncito botonfuerte">Ver los pasteles</a>
     </div>
   </section>
 
-  <section class="carrusel" aria-label="Pasteles favoritos">
-    <div class="ventana">
-      <div class="pista">
-        <div class="diapositiva" id="diapositiva1">
+  <section class="fotosgrandes" aria-label="Pasteles favoritos">
+    <div class="ventanita">
+      <div class="tirafotos">
+        <div class="diapo" id="diapo1">
           <img src="img/choco.webp" alt="Bizcocho de chocolate">
-          <div class="textodiapositiva">
-            <span class="insignia">Favorito PT-001</span>
+          <div class="textodiapo">
+            <span class="sellito">Favorito PT-001</span>
             <h3>Bizcocho de chocolate</h3>
             <p>Bizcocho de chocolate, cremoso de arequipe y crocante de nibs de cacao.</p>
-            <a href="tortaenigma.html" class="boton botonclaro">Conocer más</a>
+            <a href="tortaenigma.html" class="botoncito botonblanco">Conocer más</a>
           </div>
-          <a class="flechacarrusel izquierda" href="#diapositiva9" aria-label="Anterior">‹</a>
-          <a class="flechacarrusel derecha" href="#diapositiva2" aria-label="Siguiente">›</a>
+          <a class="flechaizq" href="#diapo9" aria-label="Anterior">‹</a>
+          <a class="flechader" href="#diapo2" aria-label="Siguiente">›</a>
         </div>
-        <div class="diapositiva" id="diapositiva2">
+        <div class="diapo" id="diapo2">
           <img src="img/OIP.webp" alt="Tiramisú">
-          <div class="textodiapositiva">
-            <span class="insignia">Favorito PT-002</span>
+          <div class="textodiapo">
+            <span class="sellito">Favorito PT-002</span>
             <h3>Tiramisú</h3>
             <p>Capas de café, crema de mascarpone y cacao.</p>
-            <a href="tiramisu.html" class="boton botonclaro">Conocer más</a>
+            <a href="tiramisu.html" class="botoncito botonblanco">Conocer más</a>
           </div>
-          <a class="flechacarrusel izquierda" href="#diapositiva1" aria-label="Anterior">‹</a>
-          <a class="flechacarrusel derecha" href="#diapositiva3" aria-label="Siguiente">›</a>
+          <a class="flechaizq" href="#diapo1" aria-label="Anterior">‹</a>
+          <a class="flechader" href="#diapo3" aria-label="Siguiente">›</a>
         </div>
-        <div class="diapositiva" id="diapositiva3">
+        <div class="diapo" id="diapo3">
           <img src="img/0267595dc0970c21aa65ab0ed7edf8da.jpg" alt="Cheesecake vasco de maracuyá">
-          <div class="textodiapositiva">
-            <span class="insignia">Favorito PT-003</span>
+          <div class="textodiapo">
+            <span class="sellito">Favorito PT-003</span>
             <h3>Cheesecake vasco de maracuyá</h3>
             <p>Base de galleta, queso cremoso y coulis de maracuyá.</p>
-            <a href="chessecakemaracuya.html" class="boton botonclaro">Conocer más</a>
+            <a href="chessecakemaracuya.html" class="botoncito botonblanco">Conocer más</a>
           </div>
-          <a class="flechacarrusel izquierda" href="#diapositiva2" aria-label="Anterior">‹</a>
-          <a class="flechacarrusel derecha" href="#diapositiva4" aria-label="Siguiente">›</a>
+          <a class="flechaizq" href="#diapo2" aria-label="Anterior">‹</a>
+          <a class="flechader" href="#diapo4" aria-label="Siguiente">›</a>
         </div>
-        <div class="diapositiva" id="diapositiva4">
+        <div class="diapo" id="diapo4">
           <img src="img/OIP (1).webp" alt="Torta de fresas y crema">
-          <div class="textodiapositiva">
-            <span class="insignia">Favorito PT-004</span>
+          <div class="textodiapo">
+            <span class="sellito">Favorito PT-004</span>
             <h3>Torta de fresas y crema</h3>
             <p>Bizcocho de vainilla, crema chantilly y fresas frescas de temporada.</p>
-            <a href="tortafresas.html" class="boton botonclaro">Conocer más</a>
+            <a href="tortafresas.html" class="botoncito botonblanco">Conocer más</a>
           </div>
-          <a class="flechacarrusel izquierda" href="#diapositiva3" aria-label="Anterior">‹</a>
-          <a class="flechacarrusel derecha" href="#diapositiva5" aria-label="Siguiente">›</a>
+          <a class="flechaizq" href="#diapo3" aria-label="Anterior">‹</a>
+          <a class="flechader" href="#diapo5" aria-label="Siguiente">›</a>
         </div>
-        <div class="diapositiva" id="diapositiva5">
+        <div class="diapo" id="diapo5">
           <img src="img/OIP (2).webp" alt="Brownie con helado">
-          <div class="textodiapositiva">
-            <span class="insignia">Favorito PT-005</span>
+          <div class="textodiapo">
+            <span class="sellito">Favorito PT-005</span>
             <h3>Brownie con helado</h3>
             <p>Brownie húmedo de chocolate oscuro con nueces y bola de helado de vainilla.</p>
-            <a href="brownie.html" class="boton botonclaro">Conocer más</a>
+            <a href="brownie.html" class="botoncito botonblanco">Conocer más</a>
           </div>
-          <a class="flechacarrusel izquierda" href="#diapositiva4" aria-label="Anterior">‹</a>
-          <a class="flechacarrusel derecha" href="#diapositiva6" aria-label="Siguiente">›</a>
+          <a class="flechaizq" href="#diapo4" aria-label="Anterior"></a>
+          <a class="flechader" href="#diapo6" aria-label="Siguiente"></a>
         </div>
-        <div class="diapositiva" id="diapositiva6">
+        <div class="diapo" id="diapo6">
           <img src="img/OIP (3).webp" alt="Cupcakes surtidos">
-          <div class="textodiapositiva">
-            <span class="insignia">Favorito PT-006</span>
+          <div class="textodiapo">
+            <span class="sellito">Favorito PT-006</span>
             <h3>Cupcakes surtidos</h3>
             <p>Cupcakes con frosting de mantequilla en sabores vainilla, arequipe y frambuesa.</p>
-            <a href="cupcake.html" class="boton botonclaro">Conocer más</a>
+            <a href="cupcake.html" class="botoncito botonblanco">Conocer más</a>
           </div>
-          <a class="flechacarrusel izquierda" href="#diapositiva5" aria-label="Anterior">‹</a>
-          <a class="flechacarrusel derecha" href="#diapositiva7" aria-label="Siguiente">›</a>
+          <a class="flechaizq" href="#diapo5" aria-label="Anterior"></a>
+          <a class="flechader" href="#diapo7" aria-label="Siguiente"></a>
         </div>
-        <div class="diapositiva" id="diapositiva7">
+        <div class="diapo" id="diapo7">
           <img src="img/OIP (4).webp" alt="Macarons franceses">
-          <div class="textodiapositiva">
-            <span class="insignia">Favorito PT-007</span>
+          <div class="textodiapo">
+            <span class="sellito">Favorito PT-007</span>
             <h3>Macarons franceses</h3>
             <p>Macarons de almendra rellenos de frambuesa, pistacho, vainilla y chocolate.</p>
-            <a href="macarons.html" class="boton botonclaro">Conocer más</a>
+            <a href="macarons.html" class="botoncito botonblanco">Conocer más</a>
           </div>
-          <a class="flechacarrusel izquierda" href="#diapositiva6" aria-label="Anterior">‹</a>
-          <a class="flechacarrusel derecha" href="#diapositiva8" aria-label="Siguiente">›</a>
+          <a class="flechaizq" href="#diapo6" aria-label="Anterior"></a>
+          <a class="flechader" href="#diapo8" aria-label="Siguiente"></a>
         </div>
-        <div class="diapositiva" id="diapositiva8">
+        <div class="diapo" id="diapo8">
           <img src="img/OIP (5).webp" alt="Tarta de limón y merengue">
-          <div class="textodiapositiva">
-            <span class="insignia">Favorito PT-008</span>
+          <div class="textodiapo">
+            <span class="sellito">Favorito PT-008</span>
             <h3>Tarta de limón y merengue</h3>
             <p>Base de masa sablée, crema de limón y merengue flameado.</p>
-            <a href="tartalimon.html" class="boton botonclaro">Conocer más</a>
+            <a href="tartalimon.html" class="botoncito botonblanco">Conocer más</a>
           </div>
-          <a class="flechacarrusel izquierda" href="#diapositiva7" aria-label="Anterior">‹</a>
-          <a class="flechacarrusel derecha" href="#diapositiva9" aria-label="Siguiente">›</a>
+          <a class="flechaizq" href="#diapo7" aria-label="Anterior"></a>
+          <a class="flechader" href="#diapo9" aria-label="Siguiente"></a>
         </div>
-        <div class="diapositiva" id="diapositiva9">
+        <div class="diapo" id="diapo9">
           <img src="img/R.jpg" alt="Donas glaseadas">
-          <div class="textodiapositiva">
-            <span class="insignia">Favorito PT-009</span>
+          <div class="textodiapo">
+            <span class="sellito">Favorito PT-009</span>
             <h3>Donas glaseadas</h3>
             <p>Donas artesanales con glaseado de vainilla, chocolate y arequipe.</p>
-            <a href="donas.html" class="boton botonclaro">Conocer más</a>
+            <a href="donas.html" class="botoncito botonblanco">Conocer más</a>
           </div>
-          <a class="flechacarrusel izquierda" href="#diapositiva8" aria-label="Anterior">‹</a>
-          <a class="flechacarrusel derecha" href="#diapositiva1" aria-label="Siguiente">›</a>
+          <a class="flechaizq" href="#diapo8" aria-label="Anterior"></a>
+          <a class="flechader" href="#diapo1" aria-label="Siguiente"></a>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="pasteles" class="seccion">
-    <h2 class="titulo">Nuestros pasteles</h2>
-    <div class="busqueda">
-      <label for="buscar" class="soloetiqueta">Buscar pasteles</label>
-      <input type="search" id="buscar" placeholder="Buscar un pastel, sabor o ingrediente…" autocomplete="off">
-    </div>
-    <div class="rejilla">
-      <article class="tarjeta cacao">
-        <div class="foto"><img src="img/choco.webp" alt="Bizcocho de chocolate" loading="lazy"></div>
-        <div class="info">
-          <span class="etiqueta">Torta Enigma</span>
+  <section id="pasteles" class="zona">
+    <h2 class="titulote">Nuestros pasteles</h2>
+
+
+    <div class="montonpasteles">
+      <article class="cajapastel">
+        <div class="fotico"><img src="img/choco.webp" alt="Bizcocho de chocolate" loading="lazy"></div>
+        <div class="textico">
+          <span class="rotulito">Torta Enigma</span>
           <h3>Bizcocho de chocolate</h3>
-          <p class="descripcion">Bizcocho de chocolate, cremoso de arequipe y crocante de nibs de cacao.</p>
-          <div class="pietarjeta">
-            <span class="precio">Desde $18.000</span>
-            <a href="tortaenigma.html" class="boton">Ver detalles</a>
+          <p class="cuentico">Bizcocho de chocolate, cremoso de arequipe y crocante de nibs de cacao.</p>
+          <div class="abajito">
+            <span class="platica">Desde $18.000</span>
+            <a href="tortaenigma.html" class="botoncito">Ver detalles</a>
           </div>
         </div>
       </article>
-      <article class="tarjeta cacao cremoso">
-        <div class="foto"><img src="img/OIP.webp" alt="Tiramisú" loading="lazy"></div>
-        <div class="info">
-          <span class="etiqueta">Postre Tiramisú</span>
+      <article class="cajapastel">
+        <div class="fotico"><img src="img/OIP.webp" alt="Tiramisú" loading="lazy"></div>
+        <div class="textico">
+          <span class="rotulito">Postre Tiramisú</span>
           <h3>Tiramisú</h3>
-          <p class="descripcion">Capas de café, crema de mascarpone y cacao.</p>
-          <div class="pietarjeta">
-            <span class="precio">Desde $16.500</span>
-            <a href="tiramisu.html" class="boton">Ver detalles</a>
+          <p class="cuentico">Capas de café, crema de mascarpone y cacao.</p>
+          <div class="abajito">
+            <span class="platica">Desde $16.500</span>
+            <a href="tiramisu.html" class="botoncito">Ver detalles</a>
           </div>
         </div>
       </article>
-      <article class="tarjeta frutal cremoso">
-        <div class="foto"><img src="img/0267595dc0970c21aa65ab0ed7edf8da.jpg" alt="Cheesecake vasco de maracuyá" loading="lazy"></div>
-        <div class="info">
-          <span class="etiqueta">Cheesecake Maracuyá</span>
+      <article class="cajapastel">
+        <div class="fotico"><img src="img/0267595dc0970c21aa65ab0ed7edf8da.jpg" alt="Cheesecake vasco de maracuyá" loading="lazy"></div>
+        <div class="textico">
+          <span class="rotulito">Cheesecake Maracuyá</span>
           <h3>Cheesecake vasco de maracuyá</h3>
-          <p class="descripcion">Base de galleta, queso cremoso y coulis de maracuyá.</p>
-          <div class="pietarjeta">
-            <span class="precio">Desde $17.000</span>
-            <a href="chessecakemaracuya.html" class="boton">Ver detalles</a>
+          <p class="cuentico">Base de galleta, queso cremoso y coulis de maracuyá.</p>
+          <div class="abajito">
+            <span class="platica">Desde $17.000</span>
+            <a href="chessecakemaracuya.html" class="botoncito">Ver detalles</a>
           </div>
         </div>
       </article>
-      <article class="tarjeta frutal cremoso">
-        <div class="foto"><img src="img/OIP (1).webp" alt="Torta de fresas y crema" loading="lazy"></div>
-        <div class="info">
-          <span class="etiqueta">Torta Fresa</span>
+      <article class="cajapastel">
+        <div class="fotico"><img src="img/OIP (1).webp" alt="Torta de fresas y crema" loading="lazy"></div>
+        <div class="textico">
+          <span class="rotulito">Torta Fresa</span>
           <h3>Torta de fresas y crema</h3>
-          <p class="descripcion">Bizcocho de vainilla, crema chantilly y fresas frescas de temporada.</p>
-          <div class="pietarjeta">
-            <span class="precio">Desde $19.500</span>
-            <a href="tortafresas.html" class="boton">Ver detalles</a>
+          <p class="cuentico">Bizcocho de vainilla, crema chantilly y fresas frescas de temporada.</p>
+          <div class="abajito">
+            <span class="platica">Desde $19.500</span>
+            <a href="tortafresas.html" class="botoncito">Ver detalles</a>
           </div>
         </div>
       </article>
-      <article class="tarjeta cacao">
-        <div class="foto"><img src="img/OIP (2).webp" alt="Brownie con helado" loading="lazy"></div>
-        <div class="info">
-          <span class="etiqueta">Brownie Enigma</span>
+      <article class="cajapastel">
+        <div class="fotico"><img src="img/OIP (2).webp" alt="Brownie con helado" loading="lazy"></div>
+        <div class="textico">
+          <span class="rotulito">Brownie Enigma</span>
           <h3>Brownie con helado</h3>
-          <p class="descripcion">Brownie húmedo de chocolate oscuro con nueces y bola de helado de vainilla.</p>
-          <div class="pietarjeta">
-            <span class="precio">Desde $12.500</span>
-            <a href="brownie.html" class="boton">Ver detalles</a>
+          <p class="cuentico">Brownie húmedo de chocolate oscuro con nueces y bola de helado de vainilla.</p>
+          <div class="abajito">
+            <span class="platica">Desde $12.500</span>
+            <a href="brownie.html" class="botoncito">Ver detalles</a>
           </div>
         </div>
       </article>
-      <article class="tarjeta cremoso">
-        <div class="foto"><img src="img/OIP (3).webp" alt="Cupcakes surtidos" loading="lazy"></div>
-        <div class="info">
-          <span class="etiqueta">Caja de cupcakes</span>
+      <article class="cajapastel">
+        <div class="fotico"><img src="img/OIP (3).webp" alt="Cupcakes surtidos" loading="lazy"></div>
+        <div class="textico">
+          <span class="rotulito">Caja de cupcakes</span>
           <h3>Cupcakes surtidos</h3>
-          <p class="descripcion">Cupcakes con frosting de mantequilla en sabores vainilla, arequipe y frambuesa.</p>
-          <div class="pietarjeta">
-            <span class="precio">Desde $24.000</span>
-            <a href="cupcake.html" class="boton">Ver detalles</a>
+          <p class="cuentico">Cupcakes con frosting de mantequilla en sabores vainilla, arequipe y frambuesa.</p>
+          <div class="abajito">
+            <span class="platica">Desde $24.000</span>
+            <a href="cupcake.html" class="botoncito">Ver detalles</a>
           </div>
         </div>
       </article>
-      <article class="tarjeta frutal">
-        <div class="foto"><img src="img/OIP (4).webp" alt="Macarons franceses" loading="lazy"></div>
-        <div class="info">
-          <span class="etiqueta">Caja de macarons</span>
+      <article class="cajapastel">
+        <div class="fotico"><img src="img/OIP (4).webp" alt="Macarons franceses" loading="lazy"></div>
+        <div class="textico">
+          <span class="rotulito">Caja de macarons</span>
           <h3>Macarons franceses</h3>
-          <p class="descripcion">Macarons de almendra rellenos de frambuesa, pistacho, vainilla y chocolate.</p>
-          <div class="pietarjeta">
-            <span class="precio">Desde $26.000</span>
-            <a href="macarons.html" class="boton">Ver detalles</a>
+          <p class="cuentico">Macarons de almendra rellenos de frambuesa, pistacho, vainilla y chocolate.</p>
+          <div class="abajito">
+            <span class="platica">Desde $26.000</span>
+            <a href="macarons.html" class="botoncito">Ver detalles</a>
           </div>
         </div>
       </article>
-      <article class="tarjeta frutal">
-        <div class="foto"><img src="img/OIP (5).webp" alt="Tarta de limón y merengue" loading="lazy"></div>
-        <div class="info">
-          <span class="etiqueta">Tarta Limón</span>
+      <article class="cajapastel">
+        <div class="fotico"><img src="img/OIP (5).webp" alt="Tarta de limón y merengue" loading="lazy"></div>
+        <div class="textico">
+          <span class="rotulito">Tarta Limón</span>
           <h3>Tarta de limón y merengue</h3>
-          <p class="descripcion">Base de masa sablée, crema de limón y merengue flameado.</p>
-          <div class="pietarjeta">
-            <span class="precio">Desde $15.500</span>
-            <a href="tartalimon.html" class="boton">Ver detalles</a>
+          <p class="cuentico">Base de masa sablée, crema de limón y merengue flameado.</p>
+          <div class="abajito">
+            <span class="platica">Desde $15.500</span>
+            <a href="tartalimon.html" class="botoncito">Ver detalles</a>
           </div>
         </div>
       </article>
-      <article class="tarjeta cremoso">
-        <div class="foto"><img src="img/R.jpg" alt="Donas glaseadas" loading="lazy"></div>
-        <div class="info">
-          <span class="etiqueta">Donas Enigma</span>
+      <article class="cajapastel">
+        <div class="fotico"><img src="img/R.jpg" alt="Donas glaseadas" loading="lazy"></div>
+        <div class="textico">
+          <span class="rotulito">Donas Enigma</span>
           <h3>Donas glaseadas</h3>
-          <p class="descripcion">Donas artesanales con glaseado de vainilla, chocolate y arequipe.</p>
-          <div class="pietarjeta">
-            <span class="precio">Desde $14.000</span>
-            <a href="donas.html" class="boton">Ver detalles</a>
+          <p class="cuentico">Donas artesanales con glaseado de vainilla, chocolate y arequipe.</p>
+          <div class="abajito">
+            <span class="platica">Desde $14.000</span>
+            <a href="donas.html" class="botoncito">Ver detalles</a>
           </div>
         </div>
       </article>
     </div>
   </section>
 
-  <section class="beneficios">
-    <div><span></span><h3>Hecho por encargo</h3><p>Cada pastel se hornea fresco el día de tu entrega.</p></div>
-    <div><span></span><h3>Ingredientes reales</h3><p>Mantequilla, chocolate y frutas de origen seleccionado.</p></div>
-    <div><span></span><h3>Domicilio</h3><p>Entregamos en la ciudad con empaque refrigerado.</p></div>
-    <div><span></span><h3>Personalizado</h3><p>Añade una dedicatoria o pide tu diseño especial.</p></div>
+  <section class="ventajas">
+    <div><h3>Hecho por encargo</h3><p>Cada pastel se hornea fresco el día de tu entrega.</p></div>
+    <div><h3>Ingredientes reales</h3><p>Mantequilla, chocolate y frutas de origen seleccionado.</p></div>
+    <div><h3>Domicilio</h3><p>Entregamos en la ciudad con empaque refrigerado.</p></div>
+    <div><h3>Personalizado</h3><p>Añade una dedicatoria o pide tu diseño especial.</p></div>
   </section>
 
-  <section id="filosofia" class="seccion filosofia">
-    <h2 class="titulo">Nuestra filosofía</h2>
+  <section id="filosofia" class="zona quienessomos">
+    <h2 class="titulote">Nuestra filosofía</h2>
     <p>Dulce Enigma nace en una cocina pequeña con una idea simple: que cada postre tenga un misterio por descubrir. Trabajamos por pedido, con recetas propias y sin conservantes, para que lo que llegue a tu mesa sea siempre memorable.</p>
+
+    <div class="videito">
+      <video controls preload="metadata">
+        <source src="video/JaciCakes Video Publicitario - Publicidad Pastelería.mp4" type="video/mp4">
+        Tu navegador no puede mostrar el video.
+      </video>
+    </div>
   </section>
 
-  <footer id="contacto" class="piedepagina">
-    <div class="columnas">
+  <section class="zona testimonios">
+    <h2 class="titulote">Lo que dicen nuestros clientes</h2>
+    <div class="filacajitas">
+      <div class="comentarioinicio">
+        <span class="estrellitas">★★★★★</span>
+        <p>“El cremoso de arequipe contra el crocante de nibs es una locura. Llegó perfecta a la fiesta.”</p>
+        <span>Camila R. · Bizcocho de chocolate</span>
+      </div>
+      <div class="comentarioinicio">
+        <span class="estrellitas">★★★★★</span>
+        <p>“El café se siente de verdad y la crema de mascarpone es ligera.”</p>
+        <span>Laura G. · Tiramisú</span>
+      </div>
+      <div class="comentarioinicio">
+        <span class="estrellitas">★★★★★</span>
+        <p>“Crocantes por fuera y suaves por dentro. El de pistacho es espectacular.”</p>
+        <span>Sofía H. · Macarons franceses</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="zona">
+    <h2 class="titulote">Dónde estamos</h2>
+    <iframe class="mapita" title="Mapa de la pastelería" loading="lazy"
+      src="https://www.google.com/maps?q=Carrera+65A+%2330a-38,+Medell%C3%ADn&output=embed"></iframe>
+  </section>
+
+  <footer class="abajotodo" id="contacto">
+    <div class="columnitas">
       <div>
-        <div class="logo logoclaro">Dulce Enigma</div>
+        <div class="nombrebonito nombreblanco">Dulce Enigma</div>
         <p>Pastelería de autor hecha con amor, por encargo.</p>
       </div>
       <div>
@@ -280,7 +314,7 @@
       </div>
       <div>
         <h4>Ubicación</h4>
-        <p><strong>Pastelería Santa Elena</strong><br>Confitería/Pastelería<br>Carrera 65A #30a-38, Medellín</p>
+        <p><strong>Pastelería dulce enigma</strong><br>Confitería/Pastelería<br>Carrera 65A #30a-38, Medellín</p>
       </div>
       <div>
         <h4>Contacto</h4>
@@ -288,10 +322,12 @@
       </div>
       <div>
         <h4>Síguenos</h4>
-        <p><a href="#">Instagram</a><br><a href="#">Facebook</a><br><a href="#">WhatsApp</a></p>
+        <p><a href="https://www.instagram.com/" target="_blank">Instagram</a><br>
+        <a href="https://www.facebook.com/" target="_blank">Facebook</a><br>
+        <a href="https://wa.me/573107574299" target="_blank">WhatsApp</a></p>
       </div>
     </div>
-    <p class="derechos">© 2026 Dulce Enigma. Todos los derechos reservados.</p>
+    <p class="letrachiquita">© 2026 Dulce Enigma. Todos los derechos reservados.</p>
   </footer>
 
   <script src="js/carrito.js"></script>

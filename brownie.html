@@ -10,23 +10,23 @@
 </head>
 <body>
 
-  <header class="encabezado">
+  <header class="arriba">
     <a href="index.html" class="volver">← Volver al catálogo</a>
-    <div class="logo">Dulce Enigma</div>
-    <a href="pedido.html" class="enlacecarrito">Carrito <span class="contador">0</span></a>
+    <div class="nombrebonito">Dulce Enigma</div>
+    <a href="pedido.html" class="menucito carritolink">Carrito <span class="numerito">0</span></a>
   </header>
 
-  <main class="detalle">
+  <main class="paginapastel">
 
-    <div class="columnaizquierda">
-      <div class="fotodetalle">
+    <div class="ladoizq">
+      <div class="fotogrande">
         <img src="img/OIP (2).webp" alt="Brownie con helado">
       </div>
-      <span class="etiqueta">Brownie Enigma</span>
+      <span class="rotulito">Brownie Enigma</span>
       <h1>Brownie con helado</h1>
-      <p class="descripcion">Brownie húmedo de chocolate oscuro con nueces y bola de helado de vainilla.</p>
+      <p class="cuentico2">Brownie húmedo de chocolate oscuro con nueces y bola de helado de vainilla.</p>
 
-      <table class="tablaporciones">
+      <table class="tablita">
         <thead>
           <tr><th>Porciones</th><th>Precio</th><th></th></tr>
         </thead>
@@ -34,102 +34,85 @@
           <tr>
             <td>1 unidad</td>
             <td>$12.500</td>
-            <td><button class="boton agregar" data-nombre="Brownie con helado · 1 unidad" data-precio="12500">Añadir</button></td>
+            <td><button class="botoncito" onclick="agregarAlCarrito('Brownie con helado · 1 unidad', 12500)">Añadir</button></td>
           </tr>
           <tr>
             <td>4 unidades</td>
             <td>$46.000</td>
-            <td><button class="boton agregar" data-nombre="Brownie con helado · 4 unidades" data-precio="46000">Añadir</button></td>
+            <td><button class="botoncito" onclick="agregarAlCarrito('Brownie con helado · 4 unidades', 46000)">Añadir</button></td>
           </tr>
           <tr>
             <td>8 unidades</td>
             <td>$88.000</td>
-            <td><button class="boton agregar" data-nombre="Brownie con helado · 8 unidades" data-precio="88000">Añadir</button></td>
+            <td><button class="botoncito" onclick="agregarAlCarrito('Brownie con helado · 8 unidades', 88000)">Añadir</button></td>
           </tr>
         </tbody>
       </table>
 
-      <form class="formagregar">
-        <label class="porcion">Porción
-          <select name="porcion">
+      <div class="agregarpastel">
+        <label>Porción
+          <select id="listaporciones">
           <option value="12500" data-nombre="Brownie con helado · 1 unidad">1 unidad · $12.500</option>
           <option value="46000" data-nombre="Brownie con helado · 4 unidades">4 unidades · $46.000</option>
           <option value="88000" data-nombre="Brownie con helado · 8 unidades">8 unidades · $88.000</option>
           </select>
         </label>
         <label>Cantidad
-          <input type="number" name="cantidad" min="1" max="20" value="1">
+          <input type="number" id="cuantos" min="1" max="20" value="1">
         </label>
-        <button type="submit" class="boton botonsolido">Agregar al carrito</button>
-        <a href="pedido.html" class="boton">Ir al pedido</a>
-      </form>
+        <button class="botoncito botonfuerte" onclick="agregarDesdeSelect()">Agregar al carrito</button>
+        <a href="pedido.html" class="botoncito">Ir al pedido</a>
+      </div>
     </div>
 
-    <div class="columnaderecha">
-      <div class="cajadetalle">
-        <h3>Perfil de sabor detallado</h3>
-        <p>Los porcentajes suman 100%.</p>
-        <div class="barraapilada perfil-50-30-20"><span></span><span></span><span></span></div>
-        <ul class="leyenda">
-          <li><i></i>Cacao <b>50%</b></li>
-          <li><i></i>Tostado <b>30%</b></li>
-          <li><i></i>Dulce <b>20%</b></li>
+    <div class="ladoder">
+      <div class="cajaextra">
+        <h3>Perfil de sabor</h3>
+        <div class="barrita"><span class="color1" style="width: 50%"></span><span class="color2" style="width: 30%"></span><span class="color3" style="width: 20%"></span></div>
+        <ul class="referencias">
+          <li><span class="punto color1"></span>Cacao <b>50%</b></li>
+          <li><span class="punto color2"></span>Tostado <b>30%</b></li>
+          <li><span class="punto color3"></span>Dulce <b>20%</b></li>
         </ul>
       </div>
 
-      <div class="cajadetalle">
+      <div class="cajaextra">
         <h3>Recomendación del chef</h3>
         <p>Ideal con un espresso intenso o un vino de postre. Conservar en refrigeración para mantener su textura.</p>
-        <ul class="consejos">
-          <li>✨ Elaboración 100% artesanal</li>
-          <li>🌱 Ingredientes de origen seleccionado</li>
+        <ul class="consejitos">
+       <li> Elaboración 100% artesanal</li>
+          <li> Ingredientes de origen seleccionado</li>
         </ul>
       </div>
     </div>
 
   </main>
 
-  <section class="opiniones seccion" aria-labelledby="titopiniones">
-    <h2 class="titulo" id="titopiniones">Opiniones</h2>
-    <div class="cuerpoopiniones">
-      <div>
-        <p class="resumenopiniones">
+  <section class="zonacomentarios">
+    <h2 class="titulote">Opiniones</h2>
+    <div class="dosladitos">
+
+      <div class="ladocomentarios">
+        <p class="resumencomentarios">
           <strong class="promedio">5.0</strong>
-          <span class="estrellas" style="--nota:5.00" role="img" aria-label="Calificación promedio">★★★★★</span>
-          <span class="totalopiniones">(2 opiniones)</span>
+          <span class="estrellitas">★★★★★</span>
+          <span>(2 opiniones)</span>
         </p>
-        <div class="listaopiniones">
-        <article class="opinion" data-nota="5">
-          <header><strong>Isabela L.</strong><span class="estrellas" style="--nota:5" role="img" aria-label="5 de 5 estrellas">★★★★★</span></header>
-          <p>Húmedo por dentro, con nueces crujientes. Con el helado de vainilla es pecado.</p>
-        </article>
-        <article class="opinion" data-nota="5">
-          <header><strong>Felipe A.</strong><span class="estrellas" style="--nota:5" role="img" aria-label="5 de 5 estrellas">★★★★★</span></header>
-          <p>Chocolate intenso sin ser pesado. Perfecto para compartir.</p>
-        </article>
+        <div>
+          <article class="cajacomentario" data-nota="5">
+            <div><strong>Isabela L.</strong><span class="estrellitas">★★★★★</span></div>
+            <p>Húmedo por dentro, con nueces crujientes. Con el helado de vainilla es pecado.</p>
+          </article>
+          <article class="cajacomentario" data-nota="5">
+            <div><strong>Felipe A.</strong><span class="estrellitas">★★★★★</span></div>
+            <p>Chocolate intenso sin ser pesado. Perfecto para compartir.</p>
+          </article>
         </div>
       </div>
 
-      <form class="formopinion" action="mailto:dulcenigma@gmail.com" method="post" enctype="text/plain">
-        <h3>Deja tu opinión</h3>
-        <div class="grupoestrellas">
-          <p>Tu calificación</p>
-          <div class="estrellasinput" role="radiogroup" aria-label="Calificación">
-          <input type="radio" name="nota" id="n5" value="5" required><label for="n5" title="5 estrellas"><span class="soloetiqueta">5 estrellas</span>★</label>
-          <input type="radio" name="nota" id="n4" value="4" required><label for="n4" title="4 estrellas"><span class="soloetiqueta">4 estrellas</span>★</label>
-          <input type="radio" name="nota" id="n3" value="3" required><label for="n3" title="3 estrellas"><span class="soloetiqueta">3 estrellas</span>★</label>
-          <input type="radio" name="nota" id="n2" value="2" required><label for="n2" title="2 estrellas"><span class="soloetiqueta">2 estrellas</span>★</label>
-          <input type="radio" name="nota" id="n1" value="1" required><label for="n1" title="1 estrellas"><span class="soloetiqueta">1 estrellas</span>★</label>
-          </div>
-        </div>
-        <label>Tu nombre<input type="text" name="nombre" required maxlength="40" autocomplete="name"></label>
-        <label>Comentario<textarea name="texto" rows="3" required maxlength="280"></textarea></label>
-        <button type="submit" class="boton botonsolido">Publicar opinión</button>
-        <p class="nota">Tu opinión se envía por correo a la pastelería.</p>
-      </form>
+
     </div>
   </section>
-
 
   <script src="js/carrito.js"></script>
 </body>

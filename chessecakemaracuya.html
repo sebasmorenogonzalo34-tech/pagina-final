@@ -10,23 +10,23 @@
 </head>
 <body>
 
-  <header class="encabezado">
+  <header class="arriba">
     <a href="index.html" class="volver">← Volver al catálogo</a>
-    <div class="logo">Dulce Enigma</div>
-    <a href="pedido.html" class="enlacecarrito">Carrito <span class="contador">0</span></a>
+    <div class="nombrebonito">Dulce Enigma</div>
+    <a href="pedido.html" class="menucito carritolink">Carrito <span class="numerito">0</span></a>
   </header>
 
-  <main class="detalle">
+  <main class="paginapastel">
 
-    <div class="columnaizquierda">
-      <div class="fotodetalle">
+    <div class="ladoizq">
+      <div class="fotogrande">
         <img src="img/0267595dc0970c21aa65ab0ed7edf8da.jpg" alt="Cheesecake vasco de maracuyá">
       </div>
-      <span class="etiqueta">Cheesecake Maracuyá</span>
+      <span class="rotulito">Cheesecake Maracuyá</span>
       <h1>Cheesecake vasco de maracuyá</h1>
-      <p class="descripcion">Base de galleta, queso cremoso y coulis de maracuyá.</p>
+      <p class="cuentico2">Base de galleta, queso cremoso y coulis de maracuyá.</p>
 
-      <table class="tablaporciones">
+      <table class="tablita">
         <thead>
           <tr><th>Porciones</th><th>Precio</th><th></th></tr>
         </thead>
@@ -34,29 +34,29 @@
           <tr>
             <td>1 porción</td>
             <td>$17.000</td>
-            <td><button class="boton agregar" data-nombre="Cheesecake vasco de maracuyá · 1 porción" data-precio="17000">Añadir</button></td>
+            <td><button class="botoncito" onclick="agregarAlCarrito('Cheesecake vasco de maracuyá · 1 porción', 17000)">Añadir</button></td>
           </tr>
           <tr>
             <td>4 - 6 porciones</td>
             <td>$55.000</td>
-            <td><button class="boton agregar" data-nombre="Cheesecake vasco de maracuyá · 4 - 6 porciones" data-precio="55000">Añadir</button></td>
+            <td><button class="botoncito" onclick="agregarAlCarrito('Cheesecake vasco de maracuyá · 4 - 6 porciones', 55000)">Añadir</button></td>
           </tr>
           <tr>
             <td>10 - 12 porciones</td>
             <td>$99.000</td>
-            <td><button class="boton agregar" data-nombre="Cheesecake vasco de maracuyá · 10 - 12 porciones" data-precio="99000">Añadir</button></td>
+            <td><button class="botoncito" onclick="agregarAlCarrito('Cheesecake vasco de maracuyá · 10 - 12 porciones', 99000)">Añadir</button></td>
           </tr>
           <tr>
             <td>16 - 20 porciones</td>
             <td>$128.000</td>
-            <td><button class="boton agregar" data-nombre="Cheesecake vasco de maracuyá · 16 - 20 porciones" data-precio="128000">Añadir</button></td>
+            <td><button class="botoncito" onclick="agregarAlCarrito('Cheesecake vasco de maracuyá · 16 - 20 porciones', 128000)">Añadir</button></td>
           </tr>
         </tbody>
       </table>
 
-      <form class="formagregar">
-        <label class="porcion">Porción
-          <select name="porcion">
+      <div class="agregarpastel">
+        <label>Porción
+          <select id="listaporciones">
           <option value="17000" data-nombre="Cheesecake vasco de maracuyá · 1 porción">1 porción · $17.000</option>
           <option value="55000" data-nombre="Cheesecake vasco de maracuyá · 4 - 6 porciones">4 - 6 porciones · $55.000</option>
           <option value="99000" data-nombre="Cheesecake vasco de maracuyá · 10 - 12 porciones">10 - 12 porciones · $99.000</option>
@@ -64,78 +64,62 @@
           </select>
         </label>
         <label>Cantidad
-          <input type="number" name="cantidad" min="1" max="20" value="1">
+          <input type="number" id="cuantos" min="1" max="20" value="1">
         </label>
-        <button type="submit" class="boton botonsolido">Agregar al carrito</button>
-        <a href="pedido.html" class="boton">Ir al pedido</a>
-      </form>
+        <button class="botoncito botonfuerte" onclick="agregarDesdeSelect()">Agregar al carrito</button>
+        <a href="pedido.html" class="botoncito">Ir al pedido</a>
+      </div>
     </div>
 
-    <div class="columnaderecha">
-      <div class="cajadetalle">
-        <h3>Perfil de sabor detallado</h3>
-        <p>Los porcentajes suman 100%.</p>
-        <div class="barraapilada perfil-40-35-25"><span></span><span></span><span></span></div>
-        <ul class="leyenda">
-          <li><i></i>Lácteo <b>40%</b></li>
-          <li><i></i>Cítrico <b>35%</b></li>
-          <li><i></i>Avainillado <b>25%</b></li>
+    <div class="ladoder">
+      <div class="cajaextra">
+        <h3>Perfil de sabor</h3>
+
+        <div class="barrita"><span class="color1" style="width: 40%"></span><span class="color2" style="width: 35%"></span><span class="color3" style="width: 25%"></span></div>
+        <ul class="referencias">
+          <li><span class="punto color1"></span>Lácteo <b>40%</b></li>
+          <li><span class="punto color2"></span>Cítrico <b>35%</b></li>
+          <li><span class="punto color3"></span>Avainillado <b>25%</b></li>
         </ul>
       </div>
 
-      <div class="cajadetalle">
+      <div class="cajaextra">
         <h3>Recomendación del chef</h3>
         <p>Ideal con un espresso intenso o un vino de postre. Conservar en refrigeración para mantener su textura.</p>
-        <ul class="consejos">
-          <li>✨ Elaboración 100% artesanal</li>
-          <li>🌱 Ingredientes de origen seleccionado</li>
+        <ul class="consejitos">
+          <li> Elaboración 100% artesanal</li>
+          <li> Ingredientes de origen seleccionado</li>
         </ul>
       </div>
     </div>
 
   </main>
 
-  <section class="opiniones seccion" aria-labelledby="titopiniones">
-    <h2 class="titulo" id="titopiniones">Opiniones</h2>
-    <div class="cuerpoopiniones">
-      <div>
-        <p class="resumenopiniones">
+  <section class="zonacomentarios">
+    <h2 class="titulote">Opiniones</h2>
+    <div class="dosladitos">
+
+      <div class="ladocomentarios">
+        <p class="resumencomentarios">
           <strong class="promedio">4.5</strong>
-          <span class="estrellas" style="--nota:4.50" role="img" aria-label="Calificación promedio">★★★★★</span>
-          <span class="totalopiniones">(2 opiniones)</span>
+          <span class="estrellitas">★★★★☆</span>
+          <span>(2 opiniones)</span>
         </p>
-        <div class="listaopiniones">
-        <article class="opinion" data-nota="5">
-          <header><strong>Valentina O.</strong><span class="estrellas" style="--nota:5" role="img" aria-label="5 de 5 estrellas">★★★★★</span></header>
-          <p>El maracuyá le da el punto ácido justo al queso cremoso.</p>
-        </article>
-        <article class="opinion" data-nota="4">
-          <header><strong>Sebastián T.</strong><span class="estrellas" style="--nota:4" role="img" aria-label="4 de 5 estrellas">★★★★★</span></header>
-          <p>Delicioso. Me habría gustado un poco más de coulis por porción.</p>
-        </article>
+        <div>
+          <article class="cajacomentario" data-nota="5">
+            <div><strong>Valentina O.</strong><span class="estrellitas">★★★★★</span></div>
+            <p>El maracuyá le da el punto ácido justo al queso cremoso.</p>
+          </article>
+          <article class="cajacomentario" data-nota="4">
+            <div><strong>Sebastián T.</strong><span class="estrellitas">★★★★☆</span></div>
+            <p>Delicioso. Me habría gustado un poco más de coulis por porción.</p>
+          </article>
         </div>
       </div>
 
-      <form class="formopinion" action="mailto:dulcenigma@gmail.com" method="post" enctype="text/plain">
-        <h3>Deja tu opinión</h3>
-        <div class="grupoestrellas">
-          <p>Tu calificación</p>
-          <div class="estrellasinput" role="radiogroup" aria-label="Calificación">
-          <input type="radio" name="nota" id="n5" value="5" required><label for="n5" title="5 estrellas"><span class="soloetiqueta">5 estrellas</span>★</label>
-          <input type="radio" name="nota" id="n4" value="4" required><label for="n4" title="4 estrellas"><span class="soloetiqueta">4 estrellas</span>★</label>
-          <input type="radio" name="nota" id="n3" value="3" required><label for="n3" title="3 estrellas"><span class="soloetiqueta">3 estrellas</span>★</label>
-          <input type="radio" name="nota" id="n2" value="2" required><label for="n2" title="2 estrellas"><span class="soloetiqueta">2 estrellas</span>★</label>
-          <input type="radio" name="nota" id="n1" value="1" required><label for="n1" title="1 estrellas"><span class="soloetiqueta">1 estrellas</span>★</label>
-          </div>
-        </div>
-        <label>Tu nombre<input type="text" name="nombre" required maxlength="40" autocomplete="name"></label>
-        <label>Comentario<textarea name="texto" rows="3" required maxlength="280"></textarea></label>
-        <button type="submit" class="boton botonsolido">Publicar opinión</button>
-        <p class="nota">Tu opinión se envía por correo a la pastelería.</p>
-      </form>
+
     </div>
   </section>
-
 
   <script src="js/carrito.js"></script>
 </body>

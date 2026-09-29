@@ -4,52 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tu pedido | Dulce Enigma</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilos.css">
+  <link rel="icon" type="image/png" href="img/pngwing.com.png">
 </head>
 <body>
 
-  <header class="encabezado">
+  <header class="arriba">
     <a href="index.html" class="volver">← Volver al catálogo</a>
-    <div class="logo">Dulce Enigma</div>
-    <a href="pedido.html" class="enlacecarrito">Carrito <span class="contador">0</span></a>
+    <div class="nombrebonito">Dulce Enigma</div>
+    <a href="pedido.html" class="menucito carritolink">Carrito <span class="numerito">0</span></a>
   </header>
 
-  <main class="seccion">
-    <h1 class="titulo">Tu pedido</h1>
-    <div class="cajapedido">
+  <main class="zona">
+    <h1 class="titulote">Tu pedido</h1>
+    <div class="zonapedido">
 
-      <section class="resumen">
+      <section class="cuentas">
         <h3>Tu carrito</h3>
-        <p class="vacio" id="vacio">Aún no has añadido nada. <a href="index.html#pasteles">Ver los pasteles</a></p>
-        <ul class="listacarrito" id="listacarrito"></ul>
-        <div id="pie-carrito" hidden>
-          <p class="totalcarrito"><span>Total</span><span id="total">$0</span></p>
-          <button type="button" class="vaciar" data-accion="vaciar">Vaciar carrito</button>
+        <p class="vacio" id="mensajevacio">Aún no has añadido nada. <a href="index.html#pasteles">Ver los pasteles</a></p>
+        <ul class="listacompras" id="listacompras"></ul>
+        <div id="piecarrito" style="display: none;">
+          <p class="totalcito totalgrande"><span>Total</span><span id="total">$0</span></p>
+          <button type="button" class="vaciartodo" onclick="vaciarCarrito()">Vaciar carrito</button>
         </div>
 
-        <hr>
+        <hr class="linea">
         <h3>¿Cómo pedir?</h3>
         <ol class="pasos">
           <li>Elige tu pastel y la porción en el catálogo.</li>
           <li>Llena tus datos y la fecha de entrega.</li>
           <li>Envía el formulario y te contactaremos para confirmar el pago.</li>
         </ol>
-        <p class="nota">Pedidos con 48 horas de anticipación. El domicilio tiene costo adicional.</p>
+        <p class="notita">Pedidos con 48 horas de anticipación. El domicilio tiene costo adicional.</p>
       </section>
 
-      <form class="formulario" action="mailto:dulcenigma@gmail.com" method="post" enctype="text/plain">
-        <label>Pastel(es) y porción<textarea name="pedido" id="pedidotexto" rows="4" required placeholder="Se llena solo con tu carrito. También puedes escribirlo aquí."></textarea></label>
+      <form class="datitos" action="mailto:dulcenigma@gmail.com" method="post" enctype="text/plain">
+        <label>Tu pedido (se llena solo con el carrito)
+          <textarea name="pedido" id="pedidotexto" rows="4" required></textarea>
+        </label>
 
-        <div class="fila">
-          <label>Nombre completo<input type="text" name="nombre" required autocomplete="name"></label>
-          <label>Teléfono<input type="tel" name="telefono" required autocomplete="tel"></label>
+        <div class="filita">
+          <label>Nombre completo
+            <input type="text" id="nombre" name="nombre" required autocomplete="name">
+          </label>
+          <label>Teléfono
+            <input type="tel" id="telefono" name="telefono" required autocomplete="tel">
+          </label>
         </div>
 
-        <label>Correo electrónico<input type="email" name="correo" required autocomplete="email"></label>
-
+        <label>Correo electrónico
+          <input type="email" id="correo" name="correo" required autocomplete="email">
+        </label>
 
         <fieldset>
           <legend>Tipo de entrega</legend>
@@ -57,12 +63,16 @@
           <label class="opcion"><input type="radio" name="entrega" value="domicilio"> Domicilio</label>
         </fieldset>
 
-        <label>Dirección de entrega (solo domicilio)<input type="text" name="direccion" id="direccion"></label>
+        <label>Dirección de entrega (solo domicilio)
+          <input type="text" id="direccion" name="direccion">
+        </label>
 
-        <div class="fila">
-          <label>Fecha<input type="date" name="fecha" id="fecha" required></label>
+        <div class="filita">
+          <label>Fecha
+            <input type="date" id="fecha" name="fecha" required>
+          </label>
           <label>Hora
-            <select name="hora" required>
+            <select id="hora" name="hora" required>
               <option value="">Elegir</option>
               <option>9:00 a. m.</option>
               <option>11:00 a. m.</option>
@@ -73,25 +83,27 @@
         </div>
 
         <label>Método de pago
-          <select name="pago" required>
+          <select id="pago" name="pago" required>
             <option>Efectivo</option>
             <option>Transferencia</option>
             <option>Tarjeta</option>
           </select>
         </label>
 
-        <label>Dedicatoria (opcional)<textarea name="dedicatoria" rows="2" maxlength="80"></textarea></label>
+        <label>Dedicatoria (opcional)
+          <textarea id="dedicatoria" name="dedicatoria" rows="2" maxlength="80"></textarea>
+        </label>
 
-        <button type="submit" class="boton botonsolido">Enviar pedido</button>
+        <button type="submit" class="botoncito botonfuerte">Enviar pedido</button>
       </form>
 
     </div>
   </main>
 
-  <footer id="contacto" class="piedepagina">
-    <div class="columnas">
+  <footer class="abajotodo" id="contacto">
+    <div class="columnitas">
       <div>
-        <div class="logo logoclaro">Dulce Enigma</div>
+        <div class="nombrebonito nombreblanco">Dulce Enigma</div>
         <p>Pastelería de autor hecha con amor, por encargo.</p>
       </div>
       <div>
@@ -100,7 +112,7 @@
       </div>
       <div>
         <h4>Ubicación</h4>
-        <p><strong>Pastelería Santa Elena</strong><br>Confitería/Pastelería<br>Carrera 65A #30a-38, Medellín</p>
+        <p><strong>Pastelería dulce enigma</strong><br>Confitería/Pastelería<br>Carrera 65A #30a-38, Medellín</p>
       </div>
       <div>
         <h4>Contacto</h4>
@@ -108,10 +120,12 @@
       </div>
       <div>
         <h4>Síguenos</h4>
-        <p><a href="#">Instagram</a><br><a href="#">Facebook</a><br><a href="#">WhatsApp</a></p>
+        <p><a href="https://www.instagram.com/" target="_blank">Instagram</a><br>
+        <a href="https://www.facebook.com/" target="_blank">Facebook</a><br>
+        <a href="https://wa.me/573107574299" target="_blank">WhatsApp</a></p>
       </div>
     </div>
-    <p class="derechos">© 2026 Dulce Enigma. Todos los derechos reservados.</p>
+    <p class="letrachiquita">© 2026 Dulce Enigma. Todos los derechos reservados.</p>
   </footer>
 
   <script src="js/carrito.js"></script>
